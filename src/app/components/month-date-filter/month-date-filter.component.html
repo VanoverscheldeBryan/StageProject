@@ -1,0 +1,48 @@
+<div class="col-lg-9 col-12 p-0">
+  <mat-form-field color="#ff4c3b" appearance="fill">
+    <mat-label>{{ "ENTERDATERANGE" | translate }}</mat-label>
+    <mat-date-range-input
+      matInput
+      [min]="minDate"
+      [max]="maxDate"
+      [formGroup]="range"
+      [rangePicker]="picker"
+      [dateFilter]="dateFilter"
+      class="calendar"
+    >
+      <input
+        (dateInput)="OnDateChange()"
+        matStartDate
+        formControlName="start"
+        placeholder="      {{ 'STARTDATE' | translate }}
+        "
+        [(ngModel)]="startDate"
+      />
+      <input
+        (dateInput)="OnDateChange()"
+        matEndDate
+        formControlName="end"
+        placeholder="  {{ 'ENDDATE' | translate }}"
+        [(ngModel)]="endDate"
+      />
+    </mat-date-range-input>
+    <div
+      *ngIf="this.startDate"
+      matDatepickerToggleIcon
+      class="mat-icon"
+      (click)="clearDate()"
+    >
+      {{ "CLEARDATE" | translate }}
+    </div>
+
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker [touchUi]="true" #picker></mat-date-range-picker>
+
+    <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')"
+      >Invalid start date</mat-error
+    >
+    <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')"
+      >Invalid end date</mat-error
+    >
+  </mat-form-field>
+</div>

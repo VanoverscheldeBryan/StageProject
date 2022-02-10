@@ -1,0 +1,38 @@
+{
+    "LOCATIONTAB": "Locatie",
+    "LOCATIONTABPL":"Locaties",
+
+    "CATEGORYTAB": "Categorie",
+    "CATEGORYTABPL": "Categorieën",
+
+    "BUTTON": "Zoek",
+    "DATETAB":"Datum",
+    "FILTERNAAM":"Filter op Naam",
+    "SORTEEROP": "Sorteer",
+    "PRIJS":"Prijs",
+    "NAAM":"Naam",
+    "POPULARITEIT":"Populariteit",
+    "AANBEVOLEN":"Aanbevolen",
+    "SHOWALLTIMES":"Toon meer tijden",
+    "SHOWLESSTIMES":"Toon minder tijden",
+    "NOPRODUCTS":"Geen producten beschikbaar met huidige selectie",
+    "TOTAAL":"Totaal",
+    "EMPTYCART":"Leeg winkelmandje",
+    "ADDTOCART":"In winkelmand",
+    "TIMESLOT":"Tijdslot",
+    "RELATABLEPRODUCTS":"Gerelateerde producten",
+    "PRICEFILTER":"Prijs",
+    "WELCOME":"Welkom bij BPR",
+    "SEARCHPRODUCTS":"Zoek producten",
+    "CONFIRM":"Bevestig",
+    "FROM": "Van",
+    "TILL": "Tot",
+    "CLEARDATE":"Verwijder datum",
+    "ENTERDATERANGE":"Voer een datumbereik in",
+    "LOADING":"Laden",
+    "STARTDATE":"Start datum",
+    "ENDDATE":"Eind datum",
+    "AANGEDUID":"Aangeduid"
+
+
+}

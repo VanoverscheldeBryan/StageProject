@@ -1,0 +1,22 @@
+<div class="card shadowType">
+<div class="card-body">
+  <section
+    *ngFor="let optionType of productOptionTypes"
+    class="m-2"
+    filter="size"
+  >
+  <!-- product option type -->
+    <div (click)="clickOptionType(optionType.id)" class="d-flex">
+      <div class="inline">
+        <div  class="font-weight-bold mb-3 cursor-pointer font-size">
+          {{ optionType.description }}
+        </div>
+      </div>
+    </div>
+    <!-- product option type item -->
+    <div *ngFor="let optionTypeItem of optionType.productOptionTypeItems">
+<app-product-option-type-items *ngIf="showOptionTypeItem" [optionTypeItem]="optionTypeItem" ></app-product-option-type-items>
+</div>
+  </section>
+</div>
+</div>

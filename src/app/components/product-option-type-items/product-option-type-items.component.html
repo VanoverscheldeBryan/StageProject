@@ -1,0 +1,17 @@
+
+<div class="card-body pt-0">
+
+<label class="form-check-label small card-link-secondary">
+  <input
+    size="40"
+    type="checkbox"
+    class="filter-option form-check-input filled-in"
+    (change)="checkedProductOptionTypeItem(optionTypeItem, $event)"
+    [value]="optionTypeItem.description"
+    [id]="optionTypeItem.id"
+    [checked]="isChecked(optionTypeItem.id)"
+  />
+
+  {{ optionTypeItem.description }}</label
+>
+</div>

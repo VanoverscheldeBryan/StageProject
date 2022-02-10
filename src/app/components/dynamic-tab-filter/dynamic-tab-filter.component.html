@@ -1,0 +1,44 @@
+
+<div class="col-lg-9 col-md-9 col-sm-12 col-12 p-0">
+  <!-- Name filter -->
+  <div>
+    <input
+      type="search"
+      id="form1"
+      class="form-control"
+      name="searchbar"
+      type="text"
+      [(ngModel)]="term"
+      placeholder="{{ 'BUTTON' | translate }}"
+    />
+  </div>
+  <div class="shadow">
+    <div class="row ml-auto">
+      <!-- OptyionTypeItems -->
+      <div class="col-lg-12 col-12 pl-2 pt-2 align-items-center">
+        <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+          <div
+            *ngFor="
+              let optionTypeItem of optionType.productOptionTypeItems
+                | searchfilter: term : 'description'
+            "
+            class="example-item"
+          >
+            <label>
+              <input
+                size="40"
+                type="checkbox"
+                class=""
+                (change)="checkedProductOptionTypeItem(optionTypeItem, $event)"
+                [value]="optionTypeItem.description"
+                [id]="optionTypeItem.id"
+                [checked]="isChecked(optionTypeItem.id)"
+              />
+              {{ optionTypeItem.description }}
+            </label>
+          </div>
+        </cdk-virtual-scroll-viewport>
+      </div>
+    </div>
+  </div>
+</div>

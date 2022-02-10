@@ -1,0 +1,132 @@
+<div  class="col-lg-9 col-md-12 col-sm-12 col-12 p-0">
+  <div class="shadow">
+    <div class="row ml-auto">
+      <div
+        class="col-12"
+      >
+      <!-- Date carousel with date cards -->
+        <div class="pt-2">
+          <ngx-slick-carousel
+            class="carousel background"
+            #slickModal="slick-carousel"
+            [config]="slideConfig"
+
+          >
+            <div
+              (click)="clickDate(date)"
+              ngxSlickItem
+              *ngFor="let date of dateTimeSlots"
+              class="
+                slide
+                m-2
+                background
+                date-card-unavailable
+                marginleft
+                rounded
+              "
+              [class.date-card-selected]="selectedDate == date.date"
+              [ngClass]="{
+                'date-card-available': date.timeSlots.length > 0,
+                'cursor-pointer': date.timeSlots.length > 0
+              }"
+            >
+              <div class="">
+                <div class="monthClass pt-1 d-flex justify-content-center">
+                  {{ date.date | date: "EEE" }}
+                </div>
+                <div
+                  class="
+                    dayClass
+                    pt-1
+                    pb-1
+                    d-flex
+                    justify-content-center
+                    font-weight-bold
+                  "
+                >
+                  {{ date.date | date: "dd" }}
+                </div>
+                <div
+                  class="
+                    monthClass
+                    pb-1
+                    textMonth
+                    d-flex
+                    justify-content-center
+                  "
+                >
+                  {{ date.date | date: "LLL" }}
+                </div>
+              </div>
+            </div>
+          </ngx-slick-carousel>
+        </div>
+        <!-- Timeslots for selected date -->
+        <div *ngIf="!showAllTimes" class="d-flex justify-content-center">
+          <div class="timeslotParent pb-2">
+            <div
+              *ngFor="let timeslot of timeslots | slice: 0:8; let i = index"
+              class="no-pointer timeslot btn button shadow rounded m-2 mt-3"
+        
+              [ngClass]="{
+                'timeslot-selected': checked(timeslot.id)
+                
+              }"
+            >
+              <label  class="m-0 cursor-pointer">
+                <input
+                  type="checkbox"
+                  hidden
+                  [checked]="checked(timeslot.id)"
+                  [id]="timeslot.id"
+                  [value]="timeslot.id"
+                  (change)="clickTimeslot(timeslot, $event)"
+                />
+                {{ timeslot.startDate | date: "HH:mm":"+0000" }}
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- More timeslots if there are more available -->
+        <div *ngIf="showAllTimes" class="d-flex justify-content-center">
+          <div class="timeslotParent">
+            <div
+              *ngFor="let timeslot of timeslots"
+              class="no-pointer timeslot btn button shadow rounded m-2 mt-3"
+        
+              [ngClass]="{
+                'timeslot-selected': checked(timeslot.id)
+              }"
+            >
+              <label class="m-0 cursor-pointer">
+                <input
+                  type="checkbox"
+                  hidden
+                  [checked]="checked(timeslot.id)"
+                  [id]="timeslot.id"
+                  [value]="timeslot.id"
+                  (change)="clickTimeslot(timeslot, $event)"
+                />
+                {{ timeslot.startDate | date: "HH:mm":"+0000" }}
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- toggle to show more timeslots -->
+        <div *ngIf="showMoreOrLessTimeslots">
+          <div *ngIf="!showAllTimes" class="p-2 d-flex justify-content-center">
+            <p class="colorP" (click)="this.showAllTimes = true">
+              {{ "SHOWALLTIMES" | translate }}
+            </p>
+          </div>
+          <!-- toggle to show less timeslots -->
+          <div *ngIf="showAllTimes" class="p-2 d-flex justify-content-center">
+            <p class="colorP" (click)="this.showAllTimes = false">
+              {{ "SHOWLESSTIMES" | translate }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

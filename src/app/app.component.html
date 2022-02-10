@@ -1,0 +1,20 @@
+<ngx-spinner [name]="spinnerName" [type]="spinnerType" color="#FF4C3B">
+  <p class="pt-lg-5" style="font-size: 20px; color: white">{{ 'LOADING' | translate }}...</p>
+</ngx-spinner>
+<div class="">
+  <app-nav-bar></app-nav-bar>
+  <!-- <app-breadcrumb></app-breadcrumb> -->
+    <app-ng-dynamic-breadcrumb
+      *ngIf="!isMobile"
+      [lastLinkColor]="breadcrumbConfig['lastLinkColor']"
+      [fontColor]="breadcrumbConfig['fontColor']"
+      [bgColor]="breadcrumbConfig['bgColor']"
+    ></app-ng-dynamic-breadcrumb>
+  <div class="container pb-4">
+    <div class="row">
+      <div class="col-12">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

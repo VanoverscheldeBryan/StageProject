@@ -1,0 +1,346 @@
+<div class="isNotMobile">
+  <div class="d-flex col-12 col-md-12 justify-content-evenly p-0">
+    <div class="background col-9">
+      <!-- main filter tabs -->
+      <div class="row">
+        <!-- location tab -->
+        <div
+          *ngIf="!(1 > this.allLocations.length)"
+          class="col-lg-3 col-md-3 col-sm-4 col-3 p-0"
+        >
+          <div
+            class="tab-text"
+            (click)="setEnumOption(myEnumOptions.Location)"
+            [ngClass]="{ 'tab-text-active': type == 1 }"
+          >
+            <span *ngIf="!this.checkedLocations.length">{{
+              "LOCATIONTAB" | translate
+            }}</span>
+            <div *ngIf="this.checkedLocations.length == 1">
+            <span *ngFor="let location of this.checkedLocations">
+              {{ location.city }}</span
+            >
+          </div>
+            <span *ngIf="this.checkedLocations.length >= 2">
+              {{ this.checkedLocations.length }} {{
+                "LOCATIONTABPL" | translate
+              }}</span
+            >
+          </div>
+        </div>
+        <!-- category tab -->
+        <div
+          *ngIf="!(1 > this.allCategories.length)"
+          class="col-lg-3 col-md-3 col-sm-4 col-3 p-0"
+        >
+          <div
+            class="tab-text"
+            (click)="setEnumOption(myEnumOptions.Category)"
+            [ngClass]="{ 'tab-text-active': type == 2 }"
+          >
+            <span *ngIf="!this.checkedCategories.length">
+              {{ "CATEGORYTAB" | translate }}</span
+            >
+            <div *ngIf="this.checkedCategories.length == 1">
+              <span *ngFor="let category of this.checkedCategories">
+                {{ category.name }}</span
+              >
+            </div>
+              <span *ngIf="this.checkedCategories.length >= 2">
+                {{ this.checkedCategories.length }} {{
+                  "CATEGORYTABPL" | translate
+                }}</span
+              >
+          </div>
+        </div>
+        <!-- date tab -->
+        <div
+          *ngIf="this.dateSetting == 2"
+          class="col-lg-3 col-md-3 col-sm-4 col-3 p-0"
+        >
+          <div
+            class="tab-text"
+            (click)="setEnumOption(myEnumOptions.Date)"
+            [ngClass]="{ 'tab-text-active': type == 3 }"
+          >
+            <span *ngIf="!this.checkedTimeslots.length">{{
+              "DATETAB" | translate
+            }}</span>
+            <span class="tab-length" *ngIf="this.checkedTimeslots.length">{{
+              tabTimeslot
+            }}</span>
+          </div>
+        </div>
+        <!-- date in month display tab -->
+        <div
+          *ngIf="this.dateSetting == 1"
+          class="col-lg-3 col-md-3 col-sm-4 col-3 p-0"
+        >
+        <div
+        class="tab-text"
+        (click)="setEnumOption(myEnumOptions.DateMonth)"
+        [ngClass]="{ 'tab-text-active': type == 4 }"
+        >
+        <span *ngIf="!this.checkedTimeslots.length">{{
+          "DATETAB" | translate
+        }}</span>
+        <span *ngIf="this.checkedTimeslots.length">{{
+          (tabTimeslot.length>6)? (tabTimeslot | slice:0:17)+'..':(tabTimeslot)
+        }}</span>
+      </div>
+        </div>
+        <!-- dynamic tab -->
+        <div
+        *ngIf="this.dynamicTabSetting != 0"
+        class="col-lg-3 col-md-3 col-sm-4 col-3 p-0"
+      >
+        <div
+          class="tab-text"
+          (click)="setEnumOption(myEnumOptions.DynamicTab)"
+          [ngClass]="{ 'tab-text-active': type == 5 }"
+        ><div *ngIf="optionType">
+          <span *ngIf="!this.checkedProductOptionTypeItems.length">
+            {{optionType.description}}</span
+          ></div>
+          <div *ngIf="this.checkedProductOptionTypeItems.length == 1">
+            <span *ngFor="let typeItem of this.checkedProductOptionTypeItems">
+              {{ typeItem.description }}</span
+            >
+          </div>
+            <span *ngIf="this.checkedProductOptionTypeItems.length >= 2">
+              {{ this.checkedProductOptionTypeItems.length }} {{
+                "AANGEDUID" | translate
+              }}</span
+            >
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- search button -->
+    <div class="col-lg-3 col-3 col-md-3 p-0">
+      <button
+        class="btn button shadow"
+        type="submit"
+        (click)="submitEmittedObjects()"
+      >
+        {{ "BUTTON" | translate }}
+      </button>
+    </div>
+  </div>
+</div>
+<!-- MOBILE VERSION -->
+<div class="isMobile">
+  <div *ngIf="!this.type">
+    <!-- location tab -->
+    <div class="pt-4">
+      <button
+        class="btn button2 shadow"
+        (click)="setEnumOption(myEnumOptions.Location)"
+      >
+        <span *ngIf="!this.checkedLocations.length">{{
+          "LOCATIONTAB" | translate
+        }}</span>
+        <div *ngIf="this.checkedLocations.length == 1">
+          <span *ngFor="let location of this.checkedLocations">
+            {{ location.city }}</span
+          >
+        </div>
+          <span *ngIf="this.checkedLocations.length >= 2">
+            {{ this.checkedLocations.length }} {{
+              "LOCATIONTABPL" | translate
+            }}</span
+          >
+        <i
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-chevron-right mt-1 float-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </i>
+      </button>
+    </div>
+    <!-- category tab -->
+    <div class="pt-4">
+      <button
+        class="btn button2 shadow"
+        (click)="setEnumOption(myEnumOptions.Category)"
+      >
+        <span *ngIf="!this.checkedCategories.length">{{
+          "CATEGORYTAB" | translate
+        }}</span>
+        <div *ngIf="this.checkedCategories.length == 1">
+          <span *ngFor="let category of this.checkedCategories">
+            {{ category.name }}</span
+          >
+        </div>
+          <span *ngIf="this.checkedCategories.length >= 2">
+            {{ this.checkedCategories.length }} {{
+              "CATEGORYTABPL" | translate
+            }}</span
+          >
+        <i
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-chevron-right mt-1 float-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            /></svg></i>
+      </button>
+    </div>
+    <!-- date tab -->
+      <div *ngIf="this.dateSetting == 2" class="pt-4">
+        <button
+          class="btn button2 shadow"
+          (click)="setEnumOption(myEnumOptions.Date)"
+        >
+          <span *ngIf="!this.checkedTimeslots.length">{{
+            "DATETAB" | translate
+          }}</span>
+          <span *ngIf="this.checkedTimeslots.length">{{
+            tabTimeslot
+          }}</span>
+          <i
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-chevron-right mt-1 float-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+              /></svg></i>
+        </button>
+      </div>
+      <!-- date month tab -->
+      <div *ngIf="this.dateSetting == 1" class="pt-4">
+        <button
+          class="btn button2 shadow"
+          (click)="setEnumOption(myEnumOptions.DateMonth)"
+        >
+          <span *ngIf="!this.checkedTimeslots.length">{{
+            "DATETAB" | translate
+          }}</span>
+          <span *ngIf="this.checkedTimeslots.length">{{
+            tabTimeslot
+          }}</span>
+          <i
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-chevron-right mt-1 float-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+              /></svg></i>
+        </button>
+      </div>
+      <!-- dynamicTab -->
+      <div *ngIf="(this.dynamicTabSetting != 0 && optionType)" class="pt-4">
+        <button
+          class="btn button2 shadow"
+          (click)="setEnumOption(myEnumOptions.DynamicTab)"
+        >
+          <span *ngIf="!this.checkedProductOptionTypeItems.length">{{
+            optionType.description
+          }}</span>
+          <span *ngIf="this.checkedProductOptionTypeItems.length == 1">
+            <span *ngFor="let typeItem of this.checkedProductOptionTypeItems">
+              {{ typeItem.description }}</span
+            >
+            </span>
+            <span *ngIf="this.checkedProductOptionTypeItems.length >= 2">
+              {{ this.checkedProductOptionTypeItems.length }} {{
+                "AANGEDUID" | translate
+              }}</span
+            >
+          <i
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-chevron-right mt-1 float-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+              /></svg></i>
+        </button>
+      </div>
+    </div>
+  <!-- search button -->
+  <div *ngIf="!this.type" class="button-position">
+    <button (click)="submitEmittedObjects()" class="btn button3 shadow">
+      {{ "BUTTON" | translate }}
+    </button>
+  </div>
+  <!-- confirm button -->
+  <div *ngIf="this.type" class="button-position">
+    <button (click)="this.type = undefined" class="btn button3 shadow">
+      {{ "CONFIRM" | translate }}
+    </button>
+  </div>
+</div>
+<!-- filter components -->
+<div class="paddingTopMobile">
+<app-location-filter
+  *ngIf="type == 1"
+  [allLocations]="allLocations"
+  [checkedLocations]="checkedLocations"
+  (locationsFilter)="updateFilter($event)"
+  [availableLocations]="availableLocations"
+></app-location-filter>
+<app-category-filter
+  *ngIf="type == 2"
+  [allCategories]="allCategories"
+  [checkedCategories]="checkedCategories"
+  (categoryFilter)="updateFilter($event)"
+  [availableCategories]="availableCategories"
+></app-category-filter>
+<app-date-filter
+  *ngIf="type == 3"
+  [allTimeslots]="allTimeslots"
+  [checkedTimeslots]="checkedTimeslots"
+  (timeslotFilter)="updateFilter($event)"
+  [availableTimeslots]="availableTimeslots"
+
+></app-date-filter>
+
+<app-month-date-filter 
+*ngIf="type == 4"  
+[allTimeslots]="allTimeslots"
+[checkedTimeslots]="checkedTimeslots"
+(timeslotFilter)="updateFilter($event)"
+[availableTimeslots]="availableTimeslots"
+
+></app-month-date-filter>
+<app-dynamic-tab-filter
+*ngIf="type == 5" 
+[productOptionTypeItems]="productOptionTypeItems"
+[checkedProductOptionTypeItems]="checkedProductOptionTypeItems"
+(productOptionTypesFilter)="updateFilter($event)"
+[optionType]="optionType"
+></app-dynamic-tab-filter>
+</div>

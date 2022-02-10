@@ -1,0 +1,970 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "country": "Belgium",
+      "state": "West-Vlaanderen",
+      "city": "Waregem",
+      "zipcode": 8790,
+      "street": "Pompoenlaan",
+      "houseNr": 12
+    },
+    {
+      "id": 2,
+      "country": "Belgium",
+      "state": "West-Vlaanderen",
+      "city": "Desselgem",
+      "zipcode": 8792,
+      "street": "Graslaan",
+      "houseNr": 14
+    },
+    {
+      "id": 3,
+      "country": "Belgium",
+      "state": "Oost-Vlaanderen",
+      "city": "Zulte",
+      "zipcode": 8790,
+      "street": "Zultselaan",
+      "houseNr": 34
+    },
+    {
+      "id": 4,
+      "country": "Belgium",
+      "state": "Oost-Vlaanderen",
+      "city": "Deinze",
+      "zipcode": 8790,
+      "street": "Deinzesteenweg",
+      "houseNr": 54
+    },
+    {
+      "id": 5,
+      "country": "Belgium",
+      "state": "Oost-Vlaanderen",
+      "city": "Machelen",
+      "zipcode": 8790,
+      "street": "Deinzesteenweg",
+      "houseNr": 54
+    },
+    {
+      "id": 6,
+      "country": "Belgium",
+      "state": "Oost-Vlaanderen",
+      "city": "Oeselgem",
+      "zipcode": 8790,
+      "street": "Deinzesteenweg",
+      "houseNr": 54
+    },
+    {
+      "id": 7,
+      "country": "Belgium",
+      "state": "Oost-Vlaanderen",
+      "city": "Wakken",
+      "zipcode": 8790,
+      "street": "Deinzesteenweg",
+      "houseNr": 54
+    },
+    {
+      "id": 8,
+      "country": "Belgium",
+      "state": "Antwerpen",
+      "city": "Aartselaar",
+      "zipcode": 8790,
+      "street": "Deinzesteenweg",
+      "houseNr": 54
+    },
+    {
+      "id": 9,
+      "country": "Belgium",
+      "state": "Antwerpen",
+      "city": "Beerse",
+      "zipcode": 8790,
+      "street": "Deinzesteenweg",
+      "houseNr": 54
+    },
+    {
+      "id": 10,
+      "country": "Belgium",
+      "state": "Luik",
+      "city": "Amel",
+      "zipcode": 8790,
+      "street": "Deinzesteenweg",
+      "houseNr": 54
+    },
+    {
+      "id": 11,
+      "country": "Belgium",
+      "state": "Luik",
+      "city": "Baelen",
+      "zipcode": 8790,
+      "street": "Deinzesteenweg",
+      "houseNr": 54
+    },
+    {
+      "id": 12,
+      "country": "Belgium",
+      "state": "Namen",
+      "city": "Andenne",
+      "zipcode": 8790,
+      "street": "Deinzesteenweg",
+      "houseNr": 54
+    }
+  ],
+  "timeslots": [
+    {
+      "id": 1,
+      "startDate": "2021-06-09T08:00:00.511Z",
+      "endDate": "2021-06-09T08:30:00.511Z"
+    },
+    {
+      "id": 2,
+      "startDate": "2021-06-09T08:30:00.511Z",
+      "endDate": "2021-06-09T09:00:00.511Z"
+    },
+    {
+      "id": 3,
+      "startDate": "2021-06-09T09:00:00.511Z",
+      "endDate": "2021-06-09T09:30:00.511Z"
+    },
+    {
+      "id": 4,
+      "startDate": "2021-06-09T09:30:00.511Z",
+      "endDate": "2021-06-09T10:00:00.511Z"
+    },
+    {
+      "id": 5,
+      "startDate": "2021-06-09T10:00:00.511Z",
+      "endDate": "2021-06-09T10:30:00.511Z"
+    },
+    {
+      "id": 6,
+      "startDate": "2021-06-09T10:30:00.511Z",
+      "endDate": "2021-06-09T11:00:00.511Z"
+    },
+    {
+      "id": 7,
+      "startDate": "2021-06-09T11:00:00.511Z",
+      "endDate": "2021-06-09T11:30:00.511Z"
+    },
+    {
+      "id": 8,
+      "startDate": "2021-06-09T11:30:00.511Z",
+      "endDate": "2021-06-09T12:00:00.511Z"
+    },
+    {
+      "id": 9,
+      "startDate": "2021-06-10T08:00:00.511Z",
+      "endDate": "2021-06-10T12:00:00.511Z"
+    },
+    {
+      "id": 10,
+      "startDate": "2021-06-10T12:00:00.511Z",
+      "endDate": "2021-06-10T16:00:00.511Z"
+    },
+    {
+      "id": 11,
+      "startDate": "2021-06-10T16:00:00.511Z",
+      "endDate": "2021-06-10T20:00:00.511Z"
+    },
+    {
+      "id": 12,
+      "startDate": "2021-06-09T12:00:00.511Z",
+      "endDate": "2021-06-09T12:30:00.511Z"
+    },
+    {
+      "id": 13,
+      "startDate": "2021-06-11T08:00:00.511Z",
+      "endDate": "2021-06-11T12:00:00.511Z"
+    },
+    {
+      "id": 14,
+      "startDate": "2021-06-11T12:00:00.511Z",
+      "endDate": "2021-06-11T16:00:00.511Z"
+    },
+    {
+      "id": 15,
+      "startDate": "2021-06-11T16:00:00.511Z",
+      "endDate": "2021-06-11T20:00:00.511Z"
+    },
+    {
+      "id": 16,
+      "startDate": "2021-06-12T08:00:00.511Z",
+      "endDate": "2021-06-12T09:00:00.511Z"
+    },
+    {
+      "id": 17,
+      "startDate": "2021-06-12T09:00:00.511Z",
+      "endDate": "2021-06-12T10:00:00.511Z"
+    },
+    {
+      "id": 18,
+      "startDate": "2021-06-12T10:00:00.511Z",
+      "endDate": "2021-06-12T11:00:00.511Z"
+    },
+    {
+      "id": 19,
+      "startDate": "2021-06-12T11:00:00.511Z",
+      "endDate": "2021-06-12T12:00:00.511Z"
+    },
+    {
+      "id": 20,
+      "startDate": "2021-06-12T12:00:00.511Z",
+      "endDate": "2021-06-12T13:00:00.511Z"
+    },
+    {
+      "id": 21,
+      "startDate": "2021-06-13T08:00:00.511Z",
+      "endDate": "2021-06-14T08:00:00.511Z"
+    },
+
+    {
+      "id": 22,
+      "startDate": "2021-06-13T08:00:00.511Z",
+      "endDate": "2021-06-15T08:00:00.511Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Fietsen"
+    },
+    {
+      "id": 2,
+      "name": "Auto's"
+    },
+    {
+      "id": 3,
+      "name": "Bromfietsen"
+    },
+    {
+      "id": 4,
+      "name": "Game consoles"
+    },
+    {
+      "id": 5,
+      "name": "Vakantiehuisjes"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Mountainbike",
+      "description": "A bike from Waregem",
+      "price": 5,
+      "image": "https://surlybikes.com/uploads/bikes/_large_image/Troll_BK0337.jpg",
+      "categoryId": 1,
+      "timeslots": [1, 2, 3, 4, 5, 6, 7, 8, 12],
+      "location": {
+        "id": 1,
+        "country": "Belgium",
+        "state": "West-Vlaanderen",
+        "city": "Waregem",
+        "zipcode": 8790,
+        "street": "Pompoenlaan",
+        "houseNr": 12
+      },
+      "productOptionItems": [
+        {
+          "id": 3,
+          "description": "2 wielen",
+          "productOptionTypeId": 2,
+          "productOptionTypeDescription": "Aantal wielen",
+          "productOptionTypeItemId": 3,
+          "groupId": "3",
+          "price": 50
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Tesla",
+      "description": "5 doors Zulte",
+      "price": 350,
+      "image": "https://www.tesla.com/assets/img/m3_fb_s.jpg",
+      "categoryId": 2,
+      "timeslots": [9, 10, 11],
+      "location": {
+        "id": 3,
+        "country": "Belgium",
+        "state": "Oost-Vlaanderen",
+        "city": "Zulte",
+        "zipcode": 8790,
+        "street": "Zultselaan",
+        "houseNr": 34
+      },
+      "productOptionItems": [
+        {
+          "id": 2,
+          "description": "5 deuren",
+          "productOptionTypeId": 1,
+          "productOptionTypeDescription": "Aantal deuren",
+          "productOptionTypeItemId": 2,
+          "groupId": "1",
+          "price": 60000
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Ford",
+      "description": "3 doors Zulte",
+      "price": 75,
+      "image": "https://blog.swanswaygarages.com/glide/uploads/Beth/Fiesta-ST-Ford-Performance-Edition-limited-to-600-units.jpg",
+      "categoryId": 2,
+      "timeslots": [9],
+      "location": {
+        "id": 3,
+        "country": "Belgium",
+        "state": "Oost-Vlaanderen",
+        "city": "Zulte",
+        "zipcode": 8790,
+        "street": "Zultselaan",
+        "houseNr": 34
+      },
+      "productOptionItems": [
+        {
+          "id": 1,
+          "description": "3 deuren",
+          "productOptionTypeId": 1,
+          "productOptionTypeDescription": "Aantal deuren",
+          "productOptionTypeItemId": 1,
+          "groupId": "1",
+          "price": 60000
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Normal Bike",
+      "description": "A normal bike from Desselgem",
+      "price": 7,
+      "image": "https://blog.allianz-assistance.be/wp-content/uploads/2019/07/tweedehands-fiets-1024x683.jpg",
+      "categoryId": 1,
+      "timeslots": [3, 4, 5, 6, 7, 8],
+      "location": {
+        "id": 2,
+        "country": "Belgium",
+        "state": "West-Vlaanderen",
+        "city": "Desselgem",
+        "zipcode": 8792,
+        "street": "Graslaan",
+        "houseNr": 14
+      },
+      "productOptionItems": [
+        {
+          "id": 3,
+          "description": "2 wielen",
+          "productOptionTypeId": 2,
+          "productOptionTypeDescription": "Aantal wielen",
+          "productOptionTypeItemId": 3,
+          "groupId": "3",
+          "price": 50
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Mountainbike",
+      "description": "A bike which to ride the mountains",
+      "price": 8.50,
+      "image": "https://en4jif3w7zq.exactdn.com/wp-content/uploads/2019/06/07204923/merida-eOne-Sixty-10k-7.jpg?strip=all&lossy=1&resize=640%2C427",
+      "categoryId": 1,
+      "timeslots": [1, 2, 3],
+      "location": {
+        "id": 4,
+        "country": "Belgium",
+        "state": "Oost-Vlaanderen",
+        "city": "Deinze",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 3,
+          "description": "2 wielen",
+          "productOptionTypeId": 2,
+          "productOptionTypeDescription": "Aantal wielen",
+          "productOptionTypeItemId": 3,
+          "groupId": "3",
+          "price": 50
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "BMW M2",
+      "description": "High-performance car",
+      "price": 275,
+      "image": "https://cdn.motor1.com/images/mgl/L9PpL/s1/lightweight-finale-edition.jpg",
+      "categoryId": 2,
+      "timeslots": [11],
+      "location": {
+        "id": 5,
+        "country": "Belgium",
+        "state": "Oost-Vlaanderen",
+        "city": "Machelen",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 2,
+          "description": "5 deuren",
+          "productOptionTypeId": 1,
+          "productOptionTypeDescription": "Aantal deuren",
+          "productOptionTypeItemId": 2,
+          "groupId": "1",
+          "price": 58900
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Harley Davidson Iron 883",
+      "description": "Standaard Harley Davidson Bike",
+      "price": 150,
+      "image": "https://www.harley-davidson.com/content/dam/h-d/images/product-images/bikes/motorcycle/2020/2020-iron-883/gallery/2020-iron-883-motorcycle-g2.jpg?impolicy=myresize&rw=820",
+      "categoryId": 3,
+      "timeslots": [13, 14, 15],
+      "location": {
+        "id": 6,
+        "country": "Belgium",
+        "state": "Oost-Vlaanderen",
+        "city": "Oeselgem",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 3,
+          "description": "2 wielen",
+          "productOptionTypeId": 2,
+          "productOptionTypeDescription": "Aantal wielen",
+          "productOptionTypeItemId": 3,
+          "groupId": "3",
+          "price": 9499
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Harley Davidson Tri Glide Ultra",
+      "description": "Trike Harley Davidson Bike",
+      "price": 250,
+      "image": "https://www.cycleworld.com/resizer/9oE8rcHRmIquoq4dl2hNDdo9cS0=/1440x0/smart/cloudfront-us-east-1.images.arcpublishing.com/octane/76NNZ5XHMVF4TCKUWZW6NF7ST4.jpg",
+      "categoryId": 3,
+      "timeslots": [13, 14, 15],
+      "location": {
+        "id": 7,
+        "country": "Belgium",
+        "state": "Oost-Vlaanderen",
+        "city": "Wakken",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 4,
+          "description": "3 wielen",
+          "productOptionTypeId": 2,
+          "productOptionTypeDescription": "Aantal wielen",
+          "productOptionTypeItemId": 4,
+          "groupId": "3",
+          "price": 34999
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "PS5",
+      "description": "Nieuwste Sony game console",
+      "price": 15,
+      "image": "https://image.coolblue.nl/max/500x500/products/1456755",
+      "categoryId": 4,
+      "timeslots": [16, 17, 18, 19, 20],
+      "location": {
+        "id": 8,
+        "country": "Belgium",
+        "state": "Antwerpen",
+        "city": "Aartselaar",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 5,
+          "description": "Sony",
+          "productOptionTypeId": 3,
+          "productOptionTypeDescription": "Game console",
+          "productOptionTypeItemId": 5,
+          "groupId": "5",
+          "price": 399
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "PS4",
+      "description": "Sony game console",
+      "price": 10,
+      "image": "https://cdn.vox-cdn.com/thumbor/fdDrZgERwqtSx2DYMfxP4_LoLY4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22024390/ps4_verge.jpg",
+      "categoryId": 4,
+      "timeslots": [18, 19, 20],
+      "location": {
+        "id": 8,
+        "country": "Belgium",
+        "state": "Antwerpen",
+        "city": "Aartselaar",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 5,
+          "description": "Sony",
+          "productOptionTypeId": 3,
+          "productOptionTypeDescription": "Game console",
+          "productOptionTypeItemId": 5,
+          "groupId": "5",
+          "price": 299
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Xbox One",
+      "description": "Microsoft game console",
+      "price": 15,
+      "image": "https://media.s-bol.com/mBrQ6rzWJvp/550x312.jpg",
+      "categoryId": 4,
+      "timeslots": [16, 17, 18, 19, 20],
+      "location": {
+        "id": 8,
+        "country": "Belgium",
+        "state": "Antwerpen",
+        "city": "Aartselaar",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 6,
+          "description": "Microsoft",
+          "productOptionTypeId": 3,
+          "productOptionTypeDescription": "Game console",
+          "productOptionTypeItemId": 6,
+          "groupId": "5",
+          "price": 299
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Nintendo Switch",
+      "description": "Nintendo game console",
+      "price": 14,
+      "image": "https://cdn.pocket-lint.com/r/s/1200x/assets/images/140007-games-review-nintendo-switch-review-image1-lp6zy9awm0.jpg",
+      "categoryId": 4,
+      "timeslots": [16, 17, 18],
+      "location": {
+        "id": 8,
+        "country": "Belgium",
+        "state": "Antwerpen",
+        "city": "Aartselaar",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 6,
+          "description": "Nintendo",
+          "productOptionTypeId": 3,
+          "productOptionTypeDescription": "Game console",
+          "productOptionTypeItemId": 7,
+          "groupId": "5",
+          "price": 299
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Vakantiehuis1",
+      "description": "Vakantiehuis1",
+      "price": 35,
+      "image": "https://cdn.bookingexperts.nl/uploads/image/image/81025/cover_1._Vakantie_Zeeland_Vakantie_woning_sluis.jpg",
+      "categoryId": 5,
+      "timeslots": [21],
+      "location": {
+        "id": 9,
+        "country": "Belgium",
+        "state": "Antwerpen",
+        "city": "Beerse",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 8,
+          "description": "2 kamers",
+          "productOptionTypeId": 4,
+          "productOptionTypeDescription": "Aantal slaapkamers",
+          "productOptionTypeItemId": 8,
+          "groupId": "5",
+          "price": 35
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Vakantiehuis2",
+      "description": "Vakantiehuis2",
+      "price": 50,
+      "image": "https://cdn-cms.bookingexperts.nl/media/926/60/preprocessed.jpg",
+      "categoryId": 5,
+      "timeslots": [21, 22],
+      "location": {
+        "id": 10,
+        "country": "Belgium",
+        "state": "Luik",
+        "city": "Amel",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 9,
+          "description": "3 kamers",
+          "productOptionTypeId": 4,
+          "productOptionTypeDescription": "Aantal slaapkamers",
+          "productOptionTypeItemId": 9,
+          "groupId": "5",
+          "price": 50
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Vakantiehuis3",
+      "description": "Vakantiehuis3",
+      "price": 75,
+      "image": "https://www.rtlnieuws.nl/sites/default/files/content/images/2021/01/09/Natuurhuisje%20Drenthe.jpg?itok=VBaDmBl_&offsetX=0&offsetY=78&cropWidth=2000&cropHeight=1125&width=1024&height=576&impolicy=dynamic",
+      "categoryId": 5,
+      "timeslots": [21, 22],
+      "location": {
+        "id": 11,
+        "country": "Belgium",
+        "state": "Luik",
+        "city": "Baelen",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 10,
+          "description": "4 kamers",
+          "productOptionTypeId": 4,
+          "productOptionTypeDescription": "Aantal slaapkamers",
+          "productOptionTypeItemId": 10,
+          "groupId": "5",
+          "price": 75
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Vakantiehuis4",
+      "description": "Vakantiehuis4",
+      "price": 100,
+      "image": "https://www.villaspot.nl/vakantie/wp-content/uploads/2018/11/Vakantiehuis-8-personen-huren-2.jpg",
+      "categoryId": 5,
+      "timeslots": [22],
+      "location": {
+        "id": 12,
+        "country": "Belgium",
+        "state": "Namen",
+        "city": "Andenne",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 11,
+          "description": "5+ kamers",
+          "productOptionTypeId": 4,
+          "productOptionTypeDescription": "Aantal slaapkamers",
+          "productOptionTypeItemId": 11,
+          "groupId": "5",
+          "price": 100
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "VakantiehuisPersoon",
+      "description": "VakantiehuisPersoon",
+      "price": 75,
+      "image": "https://www.villaspot.nl/vakantie/wp-content/uploads/2013/06/001-1.jpg",
+      "categoryId": 5,
+      "timeslots": [21, 22],
+      "location": {
+        "id": 11,
+        "country": "Belgium",
+        "state": "Luik",
+        "city": "Baelen",
+        "zipcode": 8790,
+        "street": "Deinzesteenweg",
+        "houseNr": 54
+      },
+      "productOptionItems": [
+        {
+          "id": 12,
+          "description": "2 personen",
+          "productOptionTypeId": 5,
+          "productOptionTypeDescription": "Aantal personen",
+          "productOptionTypeItemId": 12,
+          "groupId": "5",
+          "price": 100
+        }
+      ]
+    }
+  ],
+  "productOptionItems": [
+    {
+      "id": 1,
+      "description": "3 deuren",
+      "productOptionTypeId": 1,
+      "productOptionTypeDescription": "Aantal deuren",
+      "productOptionTypeItemId": 1,
+      "groupId": "1",
+      "price": 60000
+    },
+    {
+      "id": 2,
+      "description": "5 deuren",
+      "productOptionTypeId": 1,
+      "productOptionTypeDescription": "Aantal deuren",
+      "productOptionTypeItemId": 2,
+      "groupId": "2",
+      "price": 60000
+    },
+    {
+      "id": 3,
+      "description": "2 wielen",
+      "productOptionTypeId": 2,
+      "productOptionTypeDescription": "Aantal wielen",
+      "productOptionTypeItemId": 3,
+      "groupId": "3",
+      "price": 50
+    },
+    {
+      "id": 4,
+      "description": "3 wielen",
+      "productOptionTypeId": 2,
+      "productOptionTypeDescription": "Aantal wielen",
+      "productOptionTypeItemId": 4,
+      "groupId": "4",
+      "price": 34999
+    },
+    {
+      "id": 5,
+      "description": "Sony",
+      "productOptionTypeId": 3,
+      "productOptionTypeDescription": "Game console",
+      "productOptionTypeItemId": 5,
+      "groupId": "5",
+      "price": 299
+    },
+    {
+      "id": 6,
+      "description": "Microsoft",
+      "productOptionTypeId": 3,
+      "productOptionTypeDescription": "Game console",
+      "productOptionTypeItemId": 6,
+      "groupId": "5",
+      "price": 299
+    },
+    {
+      "id": 7,
+      "description": "Nintendo",
+      "productOptionTypeId": 3,
+      "productOptionTypeDescription": "Game console",
+      "productOptionTypeItemId": 7,
+      "groupId": "5",
+      "price": 299
+    },
+    {
+      "id": 8,
+      "description": "2 kamers",
+      "productOptionTypeId": 4,
+      "productOptionTypeDescription": "Aantal slaapkamers",
+      "productOptionTypeItemId": 8,
+      "groupId": "5",
+      "price": 35
+    },
+    {
+      "id": 9,
+      "description": "3 kamers",
+      "productOptionTypeId": 4,
+      "productOptionTypeDescription": "Aantal slaapkamers",
+      "productOptionTypeItemId": 9,
+      "groupId": "5",
+      "price": 50
+    },
+    {
+      "id": 10,
+      "description": "4 kamers",
+      "productOptionTypeId": 4,
+      "productOptionTypeDescription": "Aantal slaapkamers",
+      "productOptionTypeItemId": 10,
+      "groupId": "5",
+      "price": 75
+    },
+    {
+      "id": 11,
+      "description": "5+ kamers",
+      "productOptionTypeId": 4,
+      "productOptionTypeDescription": "Aantal slaapkamers",
+      "productOptionTypeItemId": 11,
+      "groupId": "5",
+      "price": 100
+    },
+    {
+      "id": 12,
+      "description": "2 personen",
+      "productOptionTypeId": 5,
+      "productOptionTypeDescription": "Aantal personen",
+      "productOptionTypeItemId": 12,
+      "groupId": "5",
+      "price": 100
+    }
+  ],
+  "productOptionTypeItem": [
+    {
+      "id": 1,
+      "productOptionTypeId": 1,
+      "description": "3 deuren",
+      "productOptionTypeDescription": "Aantal deuren"
+    },
+    {
+      "id": 2,
+      "productOptionTypeId": 1,
+      "description": "5 deuren",
+      "productOptionTypeDescription": "Aantal deuren"
+    },
+    {
+      "id": 3,
+      "productOptionTypeId": 2,
+      "description": "2 wielen",
+      "productOptionTypeDescription": "Aantal wielen"
+    },
+    {
+      "id": 4,
+      "productOptionTypeId": 2,
+      "description": "3 wielen",
+      "productOptionTypeDescription": "Aantal wielen"
+    },
+    {
+      "id": 5,
+      "productOptionTypeId": 3,
+      "description": "Sony",
+      "productOptionTypeDescription": "Game console"
+    },
+    {
+      "id": 6,
+      "productOptionTypeId": 3,
+      "description": "Microsoft",
+      "productOptionTypeDescription": "Game console"
+    },
+    {
+      "id": 7,
+      "productOptionTypeId": 3,
+      "description": "Nintendo",
+      "productOptionTypeDescription": "Game console"
+    },
+    {
+      "id": 8,
+      "productOptionTypeId": 4,
+      "description": "2 kamers",
+      "productOptionTypeDescription": "Aantal slaapkamers"
+    },
+    {
+      "id": 9,
+      "productOptionTypeId": 4,
+      "description": "3 kamers",
+      "productOptionTypeDescription": "Aantal slaapkamers"
+    },
+    {
+      "id": 10,
+      "productOptionTypeId": 4,
+      "description": "4 kamers",
+      "productOptionTypeDescription": "Aantal slaapkamers"
+    },
+    {
+      "id": 11,
+      "productOptionTypeId": 4,
+      "description": "5+ kamers",
+      "productOptionTypeDescription": "Aantal slaapkamers"
+    }
+  ],
+  "productOptionType": [
+    {
+      "id": 1,
+      "description": "Aantal deuren"
+    },
+    {
+      "id": 2,
+      "description": "Aantal wielen"
+    },
+    {
+      "id": 3,
+      "description": "Game console"
+    },
+    {
+      "id": 4,
+      "description": "Aantal slaapkamers"
+    }
+  ],
+  "dynamicProductOptionTypeItem": [
+    {
+      "id": 12,
+      "productOptionTypeId": 5,
+      "description": "2 personen",
+      "productOptionTypeDescription": "Aantal personen"
+    },
+    {
+      "id": 13,
+      "productOptionTypeId": 5,
+      "description": "3 personen",
+      "productOptionTypeDescription": "Aantal personen"
+    },
+    {
+      "id": 14,
+      "productOptionTypeId": 5,
+      "description": "4 personen",
+      "productOptionTypeDescription": "Aantal personen"
+    },
+    {
+      "id": 15,
+      "productOptionTypeId": 6,
+      "description": "Dynamic Test 1",
+      "productOptionTypeDescription": "Aantal Dynamic Tests"
+    },
+    {
+      "id": 16,
+      "productOptionTypeId": 6,
+      "description": "Dynamic Test 2",
+      "productOptionTypeDescription": "Aantal Dynamic Tests"
+    }
+  ]
+}

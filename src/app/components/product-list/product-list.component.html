@@ -1,0 +1,198 @@
+<!-- non mobile -->
+<div class="isNotMobile">
+<div class=" d-flex">
+  <!-- Side filters -->
+  <div class="inline col-lg-2 pl-0">
+    <app-side-filters></app-side-filters>
+  </div>
+  <div class=" inline col-10">
+  <div class="mt-4">
+    <div class="d-flex">
+      <!-- Name filter -->
+      <div class="inline col-md-9 col-lg-9 col-7 pl-0">
+        <input
+          placeholder=" {{ 'FILTERNAAM' | translate }}"
+          [(ngModel)]="itemName"
+          class="form-control"
+        />
+      </div>
+      <!-- Sort by filter -->
+      <div class="inline col-md-2 col-lg-2">
+        <select class="custom-select width-select" [(ngModel)]="SortbyParam">
+          <option value="" selected disabled >
+            {{ "SORTEEROP" | translate }}
+          </option>
+          <option value="price">{{ "PRIJS" | translate }}</option>
+          <option value="name">{{ "NAAM" | translate }}</option>
+        </select>
+        </div>
+        <div class=" inline col-lg-1 col-md-1 p-0">
+          <button
+          class="button ml-2 mt-1"
+          type="button"
+          (click)="onSortDirection()"
+        >
+          <i *ngIf="SortDirection === 'asc'" class="">↑</i>
+          <i *ngIf="SortDirection === 'desc'" class="">↓</i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Product List -->
+    <div
+      class="col-lg-3 col-md-4 col-sm-6 col-12 pt-3"
+      *ngFor="
+        let product of productList
+          | filter: itemName
+          | sortfilter: [SortbyParam, SortDirection]
+      "
+    >
+      <app-product-list-item
+        *ngIf="this.productList.length"
+        class=""
+        [productItem]="product"
+      ></app-product-list-item>
+    </div>
+    <!-- No products -->
+    <div class="pt-2 ml-3 font-weight-bold" *ngIf="!this.productList.length">
+      <span>{{ "NOPRODUCTS" | translate }}</span>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+<!-- mobile with sidebar -->
+<div class="isMobile">
+<mat-drawer-container  class="example-container" autosize>
+  <!-- Sidebar with filters -->
+  <mat-drawer #drawer class="example-sidenav shadow-lg rounded-lg" mode="over">
+    <div class="position-relative p-2">
+      <div (click)="drawer.toggle()" class="float-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="bi bi-x"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="pt-2">
+      <app-side-filters></app-side-filters>
+    </div>
+  </mat-drawer>
+  <div class="">
+    <!-- Back arrow -->
+    <div class="mt-3 ml-3">
+      <div  class="absolute pb-2">
+        <div class="inline">
+          <div class="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-arrow-left"
+              (click)="backToMainFilter()" 
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex">
+        <!-- Name filter -->
+        <div class="inline col-sm-6 col-lg-10 col-6 pl-0">
+          <input
+            placeholder=" {{ 'FILTERNAAM' | translate }}"
+            [(ngModel)]="itemName"
+            class="form-control"
+          />
+        </div>
+        <!-- Sort By filter -->
+        <div class="inline col-sm-4 col-4 ">
+          <select class="custom-select width-select" [(ngModel)]="SortbyParam">
+            <option value="" disabled selected>
+              {{ "SORTEEROP" | translate }}
+            </option>
+            <option value="price">{{ "PRIJS" | translate }}</option>
+            <option value="name">{{ "NAAM" | translate }}</option>
+          </select>
+
+        </div>
+        <!-- Sort Asc Desc Button  -->
+        <div class=" inline col-2 col-sm-2 p-0">
+        <button
+       
+        class="button ml-2 mt-1"
+        type="button"
+        (click)="onSortDirection()"
+      >
+        <i *ngIf="SortDirection === 'asc'" class="">↑</i>
+        <i *ngIf="SortDirection === 'desc'" class="">↓</i>
+      </button>
+    </div>
+      </div>
+      <!-- Open sidebar button -->
+      <div class="d-flex pt-2">
+        <div class="inline text-center col-8 col-sm-10 pl-0">
+          <button
+            (click)="drawer.toggle()"
+            class="btn button2 shadow"
+            type="submit"
+          >
+            <i class="mr-2"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-funnel-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"
+                /></svg></i
+            >filter
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- Product list -->
+        <div
+          class="col-lg-3 col-md-4 col-sm-4 col-6"
+          *ngFor="
+            let product of productList
+              | filter: itemName
+              | sortfilter: [SortbyParam, SortDirection]
+          "
+        >
+          <app-product-list-item
+            *ngIf="this.productList.length"
+            class="col-12"
+            [productItem]="product"
+          ></app-product-list-item>
+        </div>
+      </div>
+      <!-- No products -->
+      <div class="pt-2 ml-3 font-weight-bold" *ngIf="!this.productList.length">
+        <span>{{ "NOPRODUCTS" | translate }}</span>
+      </div>
+    </div>
+  </div>
+</mat-drawer-container>
+</div>

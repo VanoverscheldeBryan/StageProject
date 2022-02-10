@@ -1,0 +1,24 @@
+<div class="card shadowType">
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label class="text-px" for="from"><strong>Min {{ 'PRICEFILTER' | translate }}</strong></label>
+        <input
+          type="string "
+          id="from"
+          class="form-control"
+          (keyup)="inputPriceMin.next($any($event.target).value)"
+          [value]="PriceMin"
+        />
+        <label class="text-px" for="from"><strong>Max {{ 'PRICEFILTER' | translate }}</strong></label>
+        <input
+          type="string "
+          id="from"
+          class="form-control"
+          (keyup)="inputPriceMax.next($any($event.target).value)"
+          [value]="PriceMax"
+        />
+      </div>
+    </form>
+  </div>
+</div>

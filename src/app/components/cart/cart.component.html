@@ -1,0 +1,14 @@
+<div *ngIf="cartItems.length === 0" class="alert alert-info">
+  {{ "EMPTYCART" | translate }}
+</div>
+
+<ul *ngIf="cartItems.length > 0" class="list-group max-width-cart">
+  <li class="list-group-item" *ngFor="let item of cartItems">
+    <app-cart-item [cartItem]="item"></app-cart-item>
+  </li>
+
+  <li class="list-group-item background">
+    <strong>{{ "TOTAAL" | translate }}</strong>
+    {{ cartTotal | currency: "EUR" }}
+  </li>
+</ul>

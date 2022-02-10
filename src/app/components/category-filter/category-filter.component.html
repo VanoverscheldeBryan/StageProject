@@ -1,0 +1,40 @@
+  <div class="col-lg-9 col-md-12 col-sm-12 col-12 p-0">
+  <!-- Name filter -->
+  <div>
+    <input
+      type="search"
+      id="form1"
+      class="form-control"
+      name="searchbar"
+      type="text"
+      [(ngModel)]="term"
+      placeholder="{{ 'BUTTON' | translate }}"
+    />
+  </div>
+  <div class="shadow">
+    <div class="row ml-auto">
+      <!-- Categories -->
+      <div
+        class="col-lg-12 col-12 pl-2 pt-2 align-items-center"
+      >
+      <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+
+        <div *cdkVirtualFor="let category of allCategories | searchfilter: term : 'name'" class="example-item">
+          <label>
+            <input
+              class=""
+              type="checkbox"
+              (change)="checkedCategory(category, $event)"
+              [value]="category.name"
+              [id]="category.id"
+              [checked]="isChecked(category.id)"
+            />
+            {{ category.name }}
+          </label>
+        </div>
+      </cdk-virtual-scroll-viewport>
+
+      </div>
+    </div>
+  </div>
+</div>

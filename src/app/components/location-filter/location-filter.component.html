@@ -1,0 +1,55 @@
+<div class="col-lg-9 col-md-12 col-sm-12 col-12 p-0">
+  <!-- Name filter -->
+  <div>
+    <input
+      type="search"
+      class="form-control"
+      name="searchbar"
+      type="text"
+      [(ngModel)]="filter"
+      placeholder="{{ 'BUTTON' | translate }}"
+    />
+  </div>
+  <div class="shadow">
+    <div class="row ml-auto">
+      <!-- States -->
+      <div class="pl-2 pt-1 pr-0 col-6 background">
+        <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+
+        <div
+          *cdkVirtualFor="let state of states | filter: filter"
+          class="no-decoration option-text example-item"
+        >
+          <option
+            class="option-state p-1"
+            [ngClass]="{ 'active-state': state == selectedState }"
+            (mouseenter)="selectState(state)"
+          >
+            {{ state.name }}
+          </option>
+        </div>
+      </cdk-virtual-scroll-viewport>
+
+      </div>
+      <!-- Cities -->
+      <div *ngIf="selectedState" class="pl-2 pt-1 col-6">
+        <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+
+        <div class="p-1 example-item" *cdkVirtualFor="let location of selectedState.cities | searchfilter: filter : 'city'">
+          <label>
+            <input
+              type="checkbox"
+              (change)="checkedLocation(location, $event)"
+              [id]="location.id"
+              [value]="location.city"
+              [checked]="isChecked(location.id)"
+            />
+            {{ location.city }}
+          </label>
+        </div>
+      </cdk-virtual-scroll-viewport>
+
+      </div>
+    </div>
+  </div>
+</div>
